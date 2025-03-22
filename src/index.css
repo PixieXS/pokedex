@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+body {
+    height: 100%;
+    min-height: 100vh;
+    background-color: #f8f8f8; 
+}
+
+#root {
+    @apply flex flex-col min-h-screen;
+}
+
+.navigation ul {
+    @apply flex flex-col md:flex-row m-0 p-0 justify-center items-center gap-4;
+}
+
+.navigation ul li a {
+    @apply inline-block text-sm py-2 px-4 cursor-pointer text-white bg-red-600 rounded-full hover:bg-yellow-500 hover:text-black transition-all duration-300;
+}
+
+.navigation ul li a:hover {
+    @apply shadow-lg transform scale-105;
+}
+
+footer {
+    @apply bg-black text-white text-center p-4;
+}
+
+.pokemonList {
+    @apply flex justify-between gap-4 flex-wrap p-4;
+}
+
+.pokemonListItem {
+    @apply flex flex-col items-center p-4 bg-white border border-gray-200 rounded-lg shadow-md transition-transform duration-300 hover:scale-105;
+    width: 250px; 
+}
+
+.pokemonListItem img {
+    @apply object-cover mb-4;
+    width: 180px; 
+    height: auto;
+}
+
+.pokemonListItem h2 {
+    @apply text-xl font-bold mb-2 text-center;
+    color: #333;
+}
+
+.pokemonListItem span {
+    @apply text-sm font-bold mb-2;
+    color: #888;
+}
+
+.pokemonTypes {
+    @apply flex gap-2 mb-4;
+}
+
+.pokemonType {
+    @apply px-2 py-1 rounded-lg text-xs text-white;
+}
+
+.pokemonType.Planta {
+    background-color: #78C850; 
+}
+
+.pokemonType.Veneno {
+    background-color: #A040A0; 
+}
+
+.pokemonType.Fuego {
+    background-color: #F08030; 
+}
+
+.pokemonListItem div {
+    @apply flex flex-col items-center;
+}
