@@ -1,17 +1,15 @@
 import { useState } from 'react';
-
 import { PokemonList } from '../components/Pokemon/PokemonList';
 import { Page } from "../components/Page";
-
-import { getPokemonList } from '../services/pokemonapi';
+import { usePokemonList } from '../services/pokemonapi'; 
 
 export const DashboardPage = () => {
-    const pokemons = getPokemonList();
+    const { results } = usePokemonList(); 
 
     return (
         <Page title="DashBoard Page">
             <section>
-                <PokemonList pokemonList={pokemons.results} />
+                <PokemonList pokemonList={results} />
             </section>
         </Page>
     );
