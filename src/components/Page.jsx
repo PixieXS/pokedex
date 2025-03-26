@@ -20,7 +20,7 @@ export const Page = ({ title, children }) => {
                         className="w-8 h-8"
                     />
                     <p className="text-sm text-yellow-500 font-semibold">
-                        POKEDEX 2025 - ¡Atrápalos Todos!
+                        ¡Atrápalos Todos!
                     </p>
                     <img
                         src={pikachu}

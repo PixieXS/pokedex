@@ -1,0 +1,24 @@
+.pagingHolder {
+    @apply flex justify-between items-center bg-gray-200 border-2 border-red-600 rounded-lg p-4 shadow-md;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.pagingParameters select {
+    @apply bg-yellow-400 border-2 border-red-600 p-2 text-black rounded-md cursor-pointer;
+}
+
+.pagingInfo {
+    @apply text-center text-sm text-gray-700;
+}
+
+.pagingInfo input {
+    @apply w-12 border-2 border-blue-500 rounded-md p-1 text-sm text-center text-gray-700;
+}
+
+.pagingNavigator button {
+    @apply bg-blue-500 text-white border-2 border-blue-900 rounded-md px-4 py-2 text-sm cursor-pointer transition duration-200 ease-in-out;
+}
+
+.pagingNavigator button:hover {
+    @apply bg-yellow-400 text-black;
+}

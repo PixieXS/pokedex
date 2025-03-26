@@ -38,3 +38,24 @@ export const getPokemonImg = (pokemonUrl) => {
       imgSprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonCode}.png`
     };
 };
+
+
+export const getPokemonNumber = (pokemonUrl) => {
+  const pokemonCode = pokemonUrl.split("/")[6] || "";
+  return pokemonCode; 
+};
+
+
+export const getPokemonTypes = async (pokemonUrl) => {
+  try {
+    const response = await fetch(pokemonUrl);
+    if (!response.ok) {
+      throw new Error(`Error al obtener los datos del Pokémon: ${response.status}`);
+    }
+    const pokemonData = await response.json();
+    return pokemonData.types.map((typeInfo) => typeInfo.type.name); 
+  } catch (error) {
+    console.error("Error al obtener los tipos del Pokémon:", error);
+    return [];
+  }
+};

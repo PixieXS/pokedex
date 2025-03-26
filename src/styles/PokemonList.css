@@ -1,0 +1,48 @@
+.pokemonList {
+    @apply flex justify-between gap-4 flex-wrap p-4;
+}
+
+.pokemonListItem {
+    @apply flex flex-col items-center p-4 bg-white border border-gray-200 rounded-lg shadow-md transition-transform duration-300 hover:scale-105;
+    width: 250px; 
+}
+
+.pokemonListItem img {
+    @apply object-cover mb-4;
+    width: 180px; 
+    height: auto;
+}
+
+.pokemonListItem h2 {
+    @apply text-xl font-bold mb-2 text-center;
+    color: #333;
+}
+
+.pokemonListItem span {
+    @apply text-sm font-bold mb-2;
+    color: #888;
+}
+
+.pokemonListItem button {
+    @apply mt-4 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-500 hover:text-black transition-all duration-300;
+}
+
+.pokemonListItem button:hover {
+    @apply transform scale-105;
+}
+
+/* POKEMON TYPES */
+
+.pokemonListItem .pokemonNumber {
+    @apply text-sm text-gray-400 mb-2;
+    color: #888; 
+}
+
+.pokemonListItem .pokemonTypes {
+    @apply flex justify-center gap-2 mt-2;
+}
+
+.pokemonListItem .pokemonTypes span {
+    @apply text-xs font-bold py-1 px-2 rounded-lg;
+}
+
