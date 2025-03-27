@@ -19,6 +19,7 @@
     @apply bg-blue-500 text-white border-2 border-blue-900 rounded-md px-4 py-2 text-sm cursor-pointer transition duration-200 ease-in-out;
 }
 
+
 .pagingNavigator button:hover {
     @apply bg-yellow-400 text-black;
 }

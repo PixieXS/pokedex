@@ -4,8 +4,8 @@ export const Paging = (
         totalElements = 0,
         limit = 10,
         page = 1,
-        onPageChange = () => {},
-        onLimitChange = () => {}
+        onPageChange = () => { },
+        onLimitChange = () => { }
     }
 ) => {
     const totalPages = Math.ceil(totalElements / limit);
@@ -13,7 +13,7 @@ export const Paging = (
     useEffect(() => {
         pageInput.current.value = page;
     }
-    , [page, pageInput]);
+        , [page, pageInput]);
     return (
         <section className="pagingHolder">
             <section className="pagingParameters">
@@ -34,11 +34,11 @@ export const Paging = (
                         max={totalPages}
                         onChange={(e) => {
                             if (e.target.value > 0 && e.target.value <= totalPages) {
-                                onPageChange(e.target.value)
+                                onPageChange(e.target.value);
                             }
                         }}
                     />
-                    de Total {totalPages}
+                    de {totalPages}
                 </span>
             </section>
             <section className="pagingNavigator">
@@ -48,7 +48,7 @@ export const Paging = (
                             onPageChange(page - 1)
                         }
                     }
-                }
+                    }
                 >Anterior</button>
                 <button
                     onClick={() => {
@@ -56,7 +56,7 @@ export const Paging = (
                             onPageChange(page + 1)
                         }
                     }
-                }
+                    }
                 >Siguiente</button>
             </section>
         </section>
