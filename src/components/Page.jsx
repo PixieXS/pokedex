@@ -1,6 +1,6 @@
 import { NavBar } from "./Navbar";
-import pokeball from './Images/pokeball.png'; // Importando imagen
-import pikachu from './Images/pikachu.png';  // Importando imagen
+import pokeball from './Images/pokeball.png'; 
+import pikachu from './Images/pikachu.png';  
 
 export const Page = ({ title, children }) => {
     return (
