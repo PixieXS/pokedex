@@ -1,4 +1,6 @@
 import { useEffect, useRef } from "react";
+import '/src/index.css'
+
 export const Paging = (
     {
         totalElements = 0,

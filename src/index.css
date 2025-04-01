@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 body {
     height: 100%;
     min-height: 100vh;
@@ -24,7 +23,7 @@ footer {
 }
 
 .pokemonList{
-    @apply flex justify-between gap-4 flex-wrap p-4
+    @apply flex justify-start gap-4 flex-wrap p-4
 }
 
 .pokemonListItem{
@@ -38,5 +37,58 @@ footer {
     @apply object-cover;
 }
 
+/*****************ESTILO DE POKEMONLIST*****************/
+.pokemonListItem {
+    @apply flex flex-col border-2 border-gray-300 rounded-xl overflow-hidden w-72 bg-gray-100 shadow-md font-sans m-1.5 transition-transform duration-200 ease-in-out;
+}
 
-@import "./styles/paging.css";
+.pokemonListItem:hover {
+    @apply scale-105 shadow-lg;
+}
+
+.pokemonListItem img {
+    @apply w-full h-auto;
+}
+
+.pokemonListItem div {
+    @apply p-3 text-center ;
+}
+
+.pokemonListItem strong {
+    @apply text-lg text-gray-700 mb-2;
+}
+
+.pokemonListItem button {
+    @apply px-3 py-2 text-sm font-bold text-white bg-red-600 rounded-lg cursor-pointer transition-colors duration-200 ease-in-out;
+}
+
+.pokemonListItem button:hover {
+    @apply bg-orange-700;
+}
+
+
+/*****************ESTILO DE PAGING*****************/
+.pagingHolder {
+    @apply flex items-center justify-between p-4 border-yellow-400 border-4 rounded-lg shadow-md bg-white;
+}
+
+.pagingParameters select {
+    @apply px-3 py-2 border border-blue-500 rounded-lg bg-yellow-300 text-black shadow-sm hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+
+.pagingInfo {
+    @apply text-base font-semibold text-black text-center bg-yellow-100 px-3 py-2 rounded-lg border border-blue-400 shadow-inner;
+}
+
+.pagingInfo input {
+    @apply w-14 text-center border border-blue-500 rounded-md px-1 py-1 bg-white text-black focus:ring-blue-500 focus:outline-none;
+}
+
+.pagingNavigator button {
+    @apply px-4 py-2 bg-yellow-300 text-black font-semibold rounded-lg border border-blue-400 shadow-md hover:bg-blue-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-300;
+}
+
+.pagingNavigator {
+    @apply flex gap-3; 
+}
