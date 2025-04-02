@@ -72,7 +72,7 @@ footer {
 .pokemonListItem button:hover {
     @apply bg-orange-700;
 }
-
+/*****************ESTILO DE DETALLES POKEMON*****************/
 
 /*****************ESTILO DE PAGING*****************/
 .pagingHolder {
