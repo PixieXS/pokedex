@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route  } from 'react-router';
 import { MyCollection } from './pages/mycollection';
 import { DashboardPage} from './pages/dashboard'
-import { Details } from './pages/details';
+import { Details } from './pages/Details'; 
 import { Layout } from './pages/Layout';
 import { AboutPage } from './pages/about';
 
